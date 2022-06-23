@@ -9,10 +9,20 @@ const runSetup = (db, sequelize) => {
       const questionObj = await db.Questions.create({
         question: question,
       });
-      console.log(question, options);
+      const optionsPormises = [];
+      for (opt of options) {
+        optionsPormises.push(
+          db.Options.create({
+            option: opt.option,
+            introvertChances: opt.introvertChances,
+            extrovertChances: opt.extrovertChances,
+          })
+        );
+      }
+      Promise.all(optionsPormises).then((resolved) => {
+        questionObj.setOptions(resolved);
+      });
     });
-    // console.log(metadata);
-
   })();
 };
 
