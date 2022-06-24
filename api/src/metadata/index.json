@@ -9,8 +9,8 @@
   {
     "question": "what is waht?",
     "options": [
-      { "option": "option1", "introvertChances": 23, "extrovertChances": 41 },
-      { "option": "option2", "introvertChances": 29, "extrovertChances": 42 }
+      { "option": "option1", "introvertChances": 55, "extrovertChances": 71 },
+      { "option": "option2", "introvertChances": 49, "extrovertChances": 87 }
     ]
   }
 ]
