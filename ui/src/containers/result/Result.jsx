@@ -1,6 +1,5 @@
 import React from "react";
 import { Button, Typography, makeStyles, Container } from "@material-ui/core";
-import { START_TEST_BUTTON } from "../../constants/buttonsPreview";
 import { withRouter } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
@@ -15,32 +14,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Home(props) {
+function Result(props) {
   const classes = useStyles();
 
   return (
     <Container component="main" maxWidth="xs">
       <div className={classes.paper}>
         <Typography component="h4" variant="h5">
-          Welcome to PsycTest
+          You're introvert
         </Typography>
-        <Typography variant="h6">
-          Are you an introvert or an extrovert?
-        </Typography>
-        <Button
-          fullWidth
-          variant="contained"
-          color="primary"
-          className={classes.startTestButton}
-          onClick={() => {
-            props.history.push("/test");
-          }}
-        >
-          {START_TEST_BUTTON}
-        </Button>
+        <Typography variant="h6">You're extrovert</Typography>extrovert
       </div>
+      <Button>Retake</Button>
     </Container>
   );
 }
 
-export default withRouter(Home);
+export default withRouter(Result);

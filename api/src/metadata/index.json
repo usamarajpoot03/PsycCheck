@@ -1,16 +1,127 @@
 [
   {
-    "question": "what is waht?",
+    "question": "You’re really busy at work and a colleague is telling you their life story and personal woes. You:",
     "options": [
-      { "option": "option1", "introvertChances": 23, "extrovertChances": 41 },
-      { "option": "option2", "introvertChances": 29, "extrovertChances": 42 }
+      {
+        "option": "Don’t dare to interrupt them",
+        "introvertChances": 23,
+        "extrovertChances": 41
+      },
+      {
+        "option": "Think it’s more important to give them some of your time; work can wait",
+        "introvertChances": 29,
+        "extrovertChances": 42
+      },
+      {
+        "option": "Listen, but with only with half an ear",
+        "introvertChances": 23,
+        "extrovertChances": 41
+      },
+      {
+        "option": "Interrupt and explain that you are really busy at the moment",
+        "introvertChances": 29,
+        "extrovertChances": 42
+      }
     ]
   },
   {
-    "question": "what is waht?",
+    "question": "You’ve been sitting in the doctor’s waiting room for more than 25 minutes. You:",
     "options": [
-      { "option": "option1", "introvertChances": 55, "extrovertChances": 71 },
-      { "option": "option2", "introvertChances": 49, "extrovertChances": 87 }
+      {
+        "option": "Look at your watch every two minutes",
+        "introvertChances": 55,
+        "extrovertChances": 71
+      },
+      {
+        "option": "Bubble with inner anger, but keep quiet",
+        "introvertChances": 49,
+        "extrovertChances": 87
+      },
+      {
+        "option": "Explain to other equally impatient people in the room that the doctor is always running late",
+        "introvertChances": 55,
+        "extrovertChances": 71
+      },
+      {
+        "option": "Complain in a loud voice, while tapping your foot impatiently",
+        "introvertChances": 49,
+        "extrovertChances": 87
+      }
+    ]
+  },
+  {
+    "question": "You’re having an animated discussion with a colleague regarding a project that you’re in charge of. You:",
+    "options": [
+      {
+        "option": "Don’t dare contradict them",
+        "introvertChances": 55,
+        "extrovertChances": 71
+      },
+      {
+        "option": "Think that they are obviously right",
+        "introvertChances": 49,
+        "extrovertChances": 87
+      },
+      {
+        "option": "Defend your own point of view, tooth and nail",
+        "introvertChances": 55,
+        "extrovertChances": 71
+      },
+      {
+        "option": "Continuously interrupt your colleague",
+        "introvertChances": 49,
+        "extrovertChances": 87
+      }
+    ]
+  },
+  {
+    "question": "You are taking part in a guided tour of a museum. You:",
+    "options": [
+      {
+        "option": "Are a bit too far towards the back so don’t really hear what the guide is saying",
+        "introvertChances": 55,
+        "extrovertChances": 71
+      },
+      {
+        "option": "Follow the group without question",
+        "introvertChances": 49,
+        "extrovertChances": 87
+      },
+      {
+        "option": "Make sure that everyone is able to hear properly",
+        "introvertChances": 55,
+        "extrovertChances": 71
+      },
+      {
+        "option": "Are right up the front, adding your own comments in a loud voice",
+        "introvertChances": 49,
+        "extrovertChances": 87
+      }
+    ]
+  },
+  {
+    "question": "During dinner parties at your home, you have a hard time with people who:",
+    "options": [
+      {
+        "option": "Ask you to tell a story in front of everyone else",
+        "introvertChances": 55,
+        "extrovertChances": 71
+      },
+      {
+        "option": "Talk privately between themselves",
+        "introvertChances": 49,
+        "extrovertChances": 87
+      },
+      {
+        "option": "Hang around you all evening",
+        "introvertChances": 55,
+        "extrovertChances": 71
+      },
+      {
+        "option": "Always drag the conversation back to themselves",
+        "introvertChances": 49,
+        "extrovertChances": 87
+      }
     ]
   }
 ]
