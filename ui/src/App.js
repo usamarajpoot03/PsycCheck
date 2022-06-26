@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { ThemeProvider, CssBaseline } from "@material-ui/core";
 import theme  from './utils/theme';
-import AppRoutes from "./routes/appRoutes/AppRoutes";
+import AppRoutes from "./routes/AppRoutes";
 import NavBar from "components/navbar/NavBar";
 class App extends Component {
   constructor(props) {

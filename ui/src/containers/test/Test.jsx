@@ -57,14 +57,8 @@ function Test(props) {
   };
 
   const generateResult = () => {
-    getResult(answers)
-      .then(({ data: res }) => {
-        const { data, status } = res;
-        props.history.push(`${PATH_RESULT}?trait=${data}`);
-      })
-      .catch((err) => {
-        showAlert(ERROR_MESSAGE, ERROR_ALERT);
-      });
+    sessionStorage.setItem("answers", JSON.stringify(answers));
+    props.history.push(`${PATH_RESULT}`);
   };
 
   const showAlert = (message, alertType) => {
@@ -88,7 +82,7 @@ function Test(props) {
       )}
       <Paper elevation={3} className={classes.paper}>
         {loading ? <CircularProgress size={20} /> : null}
-        {loading && !questions ? null : (
+        {!loading && questions ? (
           <>
             <Typography variant="h6">
               PsycCheck - Are you an introvert or an extrovert?
@@ -135,7 +129,7 @@ function Test(props) {
               </Grid>
             </Grid>
           </>
-        )}
+        ) : null}
       </Paper>
     </Container>
   );
