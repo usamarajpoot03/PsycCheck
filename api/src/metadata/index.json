@@ -10,7 +10,7 @@
       {
         "option": "Think it’s more important to give them some of your time; work can wait",
         "introvertChances": 29,
-        "extrovertChances": 42
+        "extrovertChances": 24
       },
       {
         "option": "Listen, but with only with half an ear",
@@ -45,7 +45,7 @@
       {
         "option": "Complain in a loud voice, while tapping your foot impatiently",
         "introvertChances": 49,
-        "extrovertChances": 87
+        "extrovertChances": 27
       }
     ]
   },
@@ -59,7 +59,7 @@
       },
       {
         "option": "Think that they are obviously right",
-        "introvertChances": 49,
+        "introvertChances": 99,
         "extrovertChances": 87
       },
       {
@@ -95,7 +95,7 @@
       {
         "option": "Are right up the front, adding your own comments in a loud voice",
         "introvertChances": 49,
-        "extrovertChances": 87
+        "extrovertChances": 27
       }
     ]
   },
@@ -104,7 +104,7 @@
     "options": [
       {
         "option": "Ask you to tell a story in front of everyone else",
-        "introvertChances": 55,
+        "introvertChances": 75,
         "extrovertChances": 71
       },
       {
