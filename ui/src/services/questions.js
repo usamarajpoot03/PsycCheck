@@ -1,5 +1,5 @@
 import Axios from "./axiosConfig";
 
-export function getQuestions() {
-    return Axios.get("/questions");
+export function getResult(answers) {
+  return Axios.post("/results/generateResult", answers);
 }
