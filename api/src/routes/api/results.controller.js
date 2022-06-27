@@ -11,8 +11,9 @@ router.post("/generateResult", async (req, res) => {
     try {
       const result = await resultService.generateResult(req.body);
       return apiResponse.sendSuccessResponse(res, result, "Result generated");
-    } catch (e) {
-      return apiResponse.sendErrorResponse(res, e.message, e.code);
+    } catch (err) {
+      req.log.error(err);
+      return apiResponse.sendErrorResponse(res, err.message, err.code);
     }
   }
 });

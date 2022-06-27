@@ -5,6 +5,7 @@ const path = require("path");
 const Sequelize = require("sequelize");
 const basename = path.basename(__filename);
 const { runSetup } = require("../../utilities/setupPsycCheckDB");
+const { logger } = require("../../routes/middlewares/logger");
 const db = {};
 
 const sequelize = new Sequelize("sqlite::memory:");
@@ -12,10 +13,10 @@ const sequelize = new Sequelize("sqlite::memory:");
 sequelize
   .authenticate()
   .then(() => {
-    console.log("Connected to db successfully.");
+    logger.info("Connected to db successfully.");
   })
   .catch((err) => {
-    console.error("Unable to connect to the database:", err);
+    logger.error("Unable to connect to the database:", err);
   });
 
 fs.readdirSync(__dirname)

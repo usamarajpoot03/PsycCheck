@@ -1,10 +1,7 @@
 const responseSender = require("../../helpers/responseSender.helper");
 
 function errorHandler(err, req, res, next) {
-
-  if (!err.code && err.name !== "ValidationError") {
-    // logger.error(err.message, err);
-  }
+  req.log.error(err.message, err);
 
   if (err.name === "ValidationError" && err.errors) {
     const errMsgs = Object.keys(err.errors).map((errKey) => {

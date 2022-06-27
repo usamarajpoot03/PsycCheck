@@ -6,8 +6,9 @@ router.get("/", async (req, res) => {
   try {
     const questions = await questionService.getAllQuestions();
     return apiResponse.sendSuccessResponse(res, questions, "Questions found");
-  } catch (e) {
-    return apiResponse.sendErrorResponse(res, e.message, e.code);
+  } catch (err) {
+    req.log.error(err);
+    return apiResponse.sendErrorResponse(res, err.message, err.code);
   }
 });
 
