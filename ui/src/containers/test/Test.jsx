@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { withRouter } from "react-router-dom";
 import {
   Button,
@@ -14,7 +14,6 @@ import { Alert } from "@material-ui/lab";
 import useAxios from "utils/useAxois";
 import Question from "components/test/Question";
 import { PATH_RESULT } from "constants/paths";
-import { getResult } from "../../services/questions";
 import {
   FINISH_TEST,
   NEXT_QUESTION,
@@ -69,6 +68,9 @@ function Test(props) {
       }, 3000);
     }
   };
+  useEffect(() => {
+    if (error) showAlert(ERROR_MESSAGE, ERROR_ALERT);
+  }, [error]);
 
   return (
     <Container component="main" maxWidth="md">
