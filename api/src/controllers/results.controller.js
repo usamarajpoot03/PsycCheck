@@ -1,7 +1,7 @@
 const router = require("express").Router();
-const apiResponse = require("../../helpers/responseSender.helper");
-const resultService = require("../../services/result.service");
-const answersSchemas = require("../../helpers/validators/answers.validators");
+const apiResponse = require("../helpers/responseSender.helper");
+const resultService = require("../services/result.service");
+const answersSchemas = require("../helpers/validators/answers.validators");
 
 router.post("/generateResult", async (req, res) => {
   const { error } = answersSchemas.answersObjectSchema.validate(req.body);
