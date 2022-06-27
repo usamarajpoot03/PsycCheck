@@ -5,10 +5,12 @@ const path = require("path");
 const Sequelize = require("sequelize");
 const basename = path.basename(__filename);
 const { runSetup } = require("../../utilities/setupPsycCheckDB");
-const { logger } = require("../../routes/middlewares/logger");
+const { logger } = require("../../middlewares/logger");
 const db = {};
 
-const sequelize = new Sequelize("sqlite::memory:");
+const sequelize = new Sequelize("sqlite::memory:", {
+  logging: false
+});
 
 sequelize
   .authenticate()

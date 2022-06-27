@@ -1,4 +1,4 @@
-const responseSender = require("../../helpers/responseSender.helper");
+const responseSender = require("../helpers/responseSender.helper");
 
 function errorHandler(err, req, res, next) {
   req.log.error(err.message, err);

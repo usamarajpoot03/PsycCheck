@@ -2,8 +2,8 @@ const express = require("express");
 var app = express();
 const cors = require("cors");
 
-const errorHandler = require("./routes/middlewares/errorHandler");
-const { logger, loggerMiddleware } = require("./routes/middlewares/logger");
+const errorHandler = require("./middlewares/errorHandler");
+const { logger, loggerMiddleware } = require("./middlewares/logger");
 
 app.use(cors());
 app.use(express.json());
