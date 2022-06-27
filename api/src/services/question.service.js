@@ -19,7 +19,6 @@ addQuestion = async (requestObj) => {
   if (duplicateQuestion) {
     throw new Error("Duplicated question");
   } else {
-
     const questionInstance = await db.Questions.create({
       question: requestObj.question,
     });
@@ -40,4 +39,21 @@ addQuestion = async (requestObj) => {
   }
 };
 
-module.exports = { getAllQuestions, addQuestion };
+deleteQuestion = async (questionId) => {
+  const questionsDeleted = await db.Questions.destroy({
+    where: {
+      id: questionId,
+    },
+  });
+  if(!questionsDeleted)
+    throw new Error('Invalid question id')
+  await db.Options.destroy({
+    where: {
+      id: questionId,
+    },
+  });
+
+  return questionsDeleted;
+};
+
+module.exports = { getAllQuestions, addQuestion, deleteQuestion };

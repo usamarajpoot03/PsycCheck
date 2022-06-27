@@ -28,4 +28,19 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.delete("/:questionId", async (req, res) => {
+  const { questionId } = req.params;
+  try {
+    const questions = await questionService.deleteQuestion(questionId);
+    return apiResponse.sendSuccessResponse(
+      res,
+      questions,
+      "Question deleted successfully"
+    );
+  } catch (err) {
+    req.log.error(err);
+    return apiResponse.sendErrorResponse(res, err.message, err.code);
+  }
+});
+
 module.exports = router;
